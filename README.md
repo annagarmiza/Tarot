@@ -1,2 +1,2 @@
 # Tarot
-Tarot Web App
+Tarot Web App - On the making
