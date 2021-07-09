@@ -1,0 +1,14 @@
+html {
+  font-size: 62.5%; /*the default browser size in 16 pixels , so  100 percent is 16 default size*/
+}
+
+body {
+  /* font-family: "Lato", sans-serif;
+  font-weight: 400; */
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  /* padding: 3rem; */
+
+  box-sizing: border-box;
+}

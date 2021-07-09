@@ -1,4 +1,3 @@
-const { Double } = require("bson");
 const mongoose = require("mongoose");
 
 const cardSpreadSchema = new mongoose.Schema({
@@ -8,10 +7,8 @@ const cardSpreadSchema = new mongoose.Schema({
     type: [
       {
         placement: {
-          type: {
-            x: Number,
-            y: Number,
-          },
+          x: Number,
+          y: Number,
         },
         meaning: String,
       },
@@ -19,6 +16,10 @@ const cardSpreadSchema = new mongoose.Schema({
   },
 });
 
-const CardSpread = mongoose.model("CardSpread", cardSpreadSchema);
+const CardSpread = mongoose.model(
+  "CardSpread",
+  cardSpreadSchema,
+  "card_spreads"
+);
 
 module.exports = CardSpread;

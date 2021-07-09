@@ -1,0 +1,49 @@
+/* .container {
+  display: flex;
+  /* flex-wrap: wrap; */
+/* position: relative; */
+/* flex-direction: row; */
+/* flex-wrap: wrap;
+justify-content: center;
+align-content: flex-end;
+align-items: center; */
+/* margin-left: 0;
+    margin-right: 0; */
+/* height: 30rem; */
+/*} */
+.firstPos {
+  position: absolute;
+  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%, -50%);
+  width: 15rem;
+  height: 21rem;
+}
+
+.secondPos {
+  position: absolute;
+  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  height: 21rem;
+}
+
+.thirdPos {
+  position: absolute;
+  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -50%);
+  width: 15rem;
+  height: 21rem;
+}
+
+.p {
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  bottom: 2rem;
+}
