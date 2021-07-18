@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+.p_text {
+  font-size: 3rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.p_text_capital {
+  font-size: 3rem;
+  font-family: "Rye", cursive;
+}
+.p_text_background {
+  background: rgba(100, 148, 237, 0.795);
+  color: whitesmoke;
+}

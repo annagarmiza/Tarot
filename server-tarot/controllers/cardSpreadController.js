@@ -28,8 +28,8 @@ exports.getAllSpreads = async (req, res) => {
 
 exports.getSpread = async (req, res) => {
   try {
-    //const card = await Card.findOne({ _id: req.params.id });
-    const spread = await CardSpread.findById(req.params.id);
+    const card_spread = await CardSpread.findById(req.params.id);
+    console.log(card_spread);
 
     res.status(200).json({
       status: "success",

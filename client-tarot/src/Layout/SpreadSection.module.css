@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+.spreads_section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16rem;
+  padding-top: 9rem;
+  margin-bottom: 5rem;
+  padding-bottom: 7rem;
+
+  background-color: rgba(11, 2, 19, 0.589);
+
+  width: 100vw;
+}
+
+.h2 {
+  font-family: "Rye", cursive;
+  text-shadow: 0.1rem 0.3rem #6229ac65;
+  color: rgba(238, 238, 222, 0.801);
+  letter-spacing: 0.3rem;
+  font-weight: 100;
+  padding: 1em;
+  font-size: 3rem;
+}

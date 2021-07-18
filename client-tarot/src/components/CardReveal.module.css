@@ -1,11 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gentium+Book+Basic:wght@400;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=Gentium+Book+Basic:wght@400;700&display=swap");
 
 .card {
   padding: 0.3rem;
   position: fixed;
-  /* background-color: rgb(228, 228, 182); */
 
   background: linear-gradient(to right, #ece9e6, #ffffff);
 
@@ -28,23 +25,19 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100vh;
   z-index: 10;
 }
 
 .p {
-  /* position: fixed; */
-  /* font-family: "Gentium Book Basic", serif; */
   padding: 0.5rem;
   font-family: "Cinzel Decorative", cursive;
 
   font-size: 2rem;
   color: rgb(0, 0, 0);
-  /* text-shadow: 2px 2px 4px rgb(103, 29, 199); */
 }
 .span {
-  /* color: #660066; */
   font-family: "Bebas Neue", cursive;
 
   color: black;
@@ -52,13 +45,11 @@
 }
 
 .img {
-  /* position: relative; */
-  width: 65%;
+  width: 60%;
   height: 60%;
 }
 
 .zoom {
-  /* transition-delay: 14s; */
   animation: zoom_in 1.5s;
 }
 .fade_out {
@@ -67,13 +58,10 @@
 
 @keyframes zoom_in {
   0% {
-    /* width: 0%;
-    height: 0%; */
     opacity: 0;
   }
   100% {
     opacity: 1;
-    /* transform: scale(1); */
   }
 }
 @keyframes fade_out {
@@ -82,6 +70,5 @@
   }
   100% {
     opacity: 0;
-    /* transform: scale(1); */
   }
 }

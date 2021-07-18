@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Yatra+One&display=swap");
+
+.row {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  box-shadow: 8px 8px 45px 0 rgb(0, 0, 0);
+  perspective: 150rem;
+  height: auto;
+  width: 25rem;
+  margin: 3rem;
+  transition: all 0.5s;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 29, 29);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.picture {
+  margin: 0.6rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  height: 20rem;
+  background-size: cover;
+}
+
+.heading {
+  text-align-last: center;
+  position: relative;
+  font-family: "Yatra One", cursive;
+  letter-spacing: 0.3rem;
+  box-shadow: 5px 6px;
+  top: -12rem;
+
+  text-transform: uppercase;
+  color: rgb(5, 5, 5);
+}
+.p {
+  color: gainsboro;
+  letter-spacing: 0.1rem;
+  padding: 1em;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 300;
+  top: -3rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.img1 {
+  background-image: linear-gradient(to right, #ff00cc, #00f7ff),
+    url(../assets/simple-tarot-spread2.jpg);
+}
+
+.img2 {
+  background-image: linear-gradient(to right, #e65c00, #f9d423),
+    url(../assets/celtic-cross-tarot-spread.jpg);
+}
+
+.img3 {
+  background-image: linear-gradient(to right, #2f4d1f, #20d19c, #614694),
+    url(../assets/tree-tarot-spread.jpg);
+}
+
+.heading1 {
+  background: linear-gradient(to right, #e696dc, #89fffd);
+}
+.heading2 {
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+.heading3 {
+  /* background: linear-gradient(to right, #79e293, #85fa8b, #9b72e9); */
+  background: linear-gradient(to right, #a8ff78, #78ffd6, #9b72e9);
+}
+
+.card {
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0rem 0rem 4rem 0.2rem rgb(122, 122, 122);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.icon {
+  position: absolute;
+  top: 2rem;
+  padding: 1rem;
+  background-color: rgba(37, 36, 36, 0.815);
+  clip-path: circle();
+  left: 18rem;
+  width: 20%;
+  z-index: 1;
+}

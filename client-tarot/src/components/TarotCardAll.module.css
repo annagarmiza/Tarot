@@ -1,16 +1,25 @@
 .container {
-  margin-left: 0;
+  /* margin-left: 0;
   padding-left: 0;
-  margin-top: 4rem;
-  position: absolute;
-  display: flex;
+  margin-top: 1rem; */
+  /* position: absolute;
+  display: grid; */
+  /* break-inside: avoid-column; */
+  /* 
+  justify-content: space-around;
+  align-content: space-evenly; */
+  /* display: grid; */
+
+  position: relative;
+  /* margin: 0 6px 12px 6px; */
+  /* padding: 16px; */
 
   /* overflow-y: scroll; */
   /* display: inline-flex; */
   /* position: relative; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   /* position: relative; */
-  justify-content: center;
+  /* justify-content: center; */
 
   /* COMMENT THIS WAS BEFOTR */
   /* display: inline-flex;
@@ -24,4 +33,9 @@
   /* margin-left: 0;
   margin-right: 0; */
   /* height: 30rem; */
+}
+
+.grid {
+  display: inline-block;
+  /* margin: 2rem; */
 }

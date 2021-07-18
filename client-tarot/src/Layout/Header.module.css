@@ -1,29 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 
 .header {
-  margin-top: 1rem;
+  height: 10vh;
+  position: fixed;
+  padding-top: 2rem;
+  /* margin-top: -8rem; */
   font-family: "Rye", cursive;
   font-style: normal;
   font-size: large;
   color: rgba(211, 194, 134, 0.836);
   text-shadow: 0.2rem 0.2rem #0000005e;
-  /* rgba(211, 194, 134, 0.596); */
-  /* background-color: rgba(142, 41, 224, 0.205); */
-  position: "fixed";
-  /* background-color: rgba(153, 139, 95, 0.171); */
-  /* border: 0.3px solid rgb(133, 123, 106); */
+  z-index: 10;
 }
 
 .img {
+  position: fixed;
+
   margin-top: -1rem;
-  /* margin-left: -7px; */
-  position: absolute;
-  /* box-shadow: 0 0 rem 0rem rgb(206, 185, 255); */
   height: 7rem;
   width: 8rem;
   cursor: pointer;
 }
 .h1 {
+  position: fixed;
   padding-left: 8rem;
   font-weight: 20;
   cursor: pointer;

@@ -4,7 +4,7 @@ const cardSchema = new mongoose.Schema({
   name: String,
   number: Number,
   numberRoman: String,
-  type: String, //note it is missing type!
+  type: String,
   acrana: String,
   keys: [String],
   meaning: String,

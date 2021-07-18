@@ -1,0 +1,62 @@
+.container {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #280247cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.loader {
+  position: absolute;
+  left: 40%;
+  top: -20%;
+  border: 12px solid #949494d5;
+  border-radius: 50%;
+  border-top: 12px solid #563088;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.img_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.h2 {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 3rem;
+  font-size: 400%;
+  color: white;
+}
+.img {
+  height: 35rem;
+  width: 35rem;
+}
+.cloud_1 {
+  position: relative;
+  left: -50%;
+}
+
+.cloud_3 {
+  position: relative;
+  left: 48%;
+  top: -120%;
+  /* top: -3%; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

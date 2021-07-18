@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import mainIcon from "./../assets/tarot3.png";
+import SoundButton from "../UI/SoundButton";
 
 function Header() {
   return (
@@ -20,6 +21,7 @@ function Header() {
       >
         TAROT
       </h1>
+      <SoundButton></SoundButton>
     </header>
   );
 }

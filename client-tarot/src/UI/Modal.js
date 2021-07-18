@@ -1,25 +1,45 @@
 import React from "react";
-import { Fragment } from "react";
 import Button from "./Button";
+import ButtonNext from "./ButtonNext";
+import ButtonBack from "./ButtonBack";
 import styles from "./Modal.module.css";
+import closeIcon from "../assets/cancel1.png";
+
 export default function Modal(props) {
   return (
-    <Fragment>
-      <div className={styles.backdrop}></div>
+    <div>
       <div className={styles.modal}>
         <header className={styles.header}>
-          <h2 className={styles.h2}>{props.title}</h2>
-          <span className={styles.span} class="close">
-            Skip
-          </span>
+          <h2>{props.title}</h2>
+          <img src={closeIcon} alt="close" onClick={props.onExit}></img>
         </header>
-        <div className={styles.message}>
-          <p className={styles.p}> {props.message}</p>
+        <div className={styles.content}>
+          <img className={styles.mainImg} src={props.img1}></img>
+          <img className={styles.glitter} src={props.img2}></img>
+
+          <div>{props.children}</div>
         </div>
-        <footer className={styles.p}>
-          <Button>{props.btnText}</Button>
-        </footer>
+        <div className={styles.actions}>
+          <div className={styles.back}>
+            {props.back && (
+              <ButtonBack onClick={props.onClickBack}>
+                {props.btnTextBack}
+              </ButtonBack>
+            )}
+          </div>
+          <div className={styles.next}>
+            {props.arrow ? (
+              <ButtonNext className={styles.next} onClick={props.onClick}>
+                {props.btnText}
+              </ButtonNext>
+            ) : (
+              <Button onClick={props.onClick}>{props.btnText}</Button>
+            )}
+          </div>
+        </div>
       </div>
-    </Fragment>
+
+      <div className={styles.backdrop} onClick={props.onExit}></div>
+    </div>
   );
 }

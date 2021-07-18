@@ -1,0 +1,51 @@
+.button {
+  background-color: #2a0297; /* Green */
+  border: none;
+  height: 8rem;
+  width: 8rem;
+  color: white;
+  /* padding: 13px 6px; */
+  text-align: left;
+  padding-left: 3rem;
+  /* padding-left: -8rem; */
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0.3rem 0.9rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  clip-path: polygon(
+    40% 0%,
+    40% 20%,
+    100% 20%,
+    100% 80%,
+    40% 80%,
+    40% 100%,
+    0% 50%
+  );
+
+  /* position: absolute; */
+}
+
+.button1 {
+  background-color: rgba(87, 53, 175, 0.61);
+  color: rgb(255, 255, 255);
+  /* border: 2px solid #3c26bbbe; */
+  clip-path: polygon(
+    40% 0%,
+    40% 20%,
+    100% 20%,
+    100% 80%,
+    40% 80%,
+    40% 100%,
+    0% 50%
+  );
+}
+
+.button1:hover {
+  background-color: #00000096;
+  color: white;
+}
+
+.center {
+  margin: 1rem;
+}

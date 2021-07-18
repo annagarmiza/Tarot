@@ -1,18 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playball&display=swap");
 
 .board {
+  margin-top: 9rem;
   background-color: rgba(11, 2, 19, 0.719);
-  /* background-attachment: scroll; */
   width: 100vw;
-  height: 100vh;
-  /* background-size: contain; */
-  display: flex;
-  text-align: center;
-
-  /* flex-wrap: wrap; */
-  /* position: relative; */
+  height: auto;
   z-index: -5;
 }
+
 .h1 {
   margin-left: 2rem;
   font-family: "Bebas Neue", cursive;
@@ -45,4 +40,10 @@
   width: 80%;
   height: 100vh;
   z-index: 10;
+}
+.total {
+  position: absolute;
+  background-color: rgba(11, 2, 19, 0.719);
+  width: 100vw;
+  height: 100vh;
 }

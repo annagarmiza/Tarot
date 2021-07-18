@@ -8,6 +8,7 @@ exports.getAllCards = async (req, res) => {
     excludeFields.forEach((el) => delete queryObj[el]);
 
     let query = Card.find(queryObj);
+    console.log(query);
 
     //Sorting
     if (req.query.sort) {
@@ -31,7 +32,7 @@ exports.getCard = async (req, res) => {
   try {
     //const card = await Card.findOne({ _id: req.params.id });
     const card = await Card.findById(req.params.id);
-
+    console.log(card);
     res.status(200).json({
       status: "success",
       data: { card },

@@ -1,23 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
 .modal {
-  width: 50%;
-  height: 50%;
+  position: fixed;
+  top: 3vh;
+  width: 90rem;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  /* width: 100vw; */
+  z-index: 14;
+  overflow: hidden;
+  background-color: rgb(29, 27, 24);
+  border-radius: 2rem;
+  box-shadow: 0 0.4rem 2rem rgba(165, 162, 162, 0.74);
 }
-.header {
-}
-.h2 {
-}
-.message {
-}
-.p {
-}
+
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.753);
 }
+
+.header {
+  font-family: "Comfortaa", cursive;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(
+    to right,
+    #4568dc,
+    #b06ab3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* 
+  background: #900baa; */
+  padding: 0.7rem;
+}
+
+.header h2 {
+  margin-left: 1rem;
+  color: white;
+}
+
+.header img {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.header img:hover {
+  box-shadow: 0 0rem 1rem rgba(194, 194, 194, 0.74);
+}
+
+.content {
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(190, 178, 178);
+  padding: 2rem;
+  font-size: 2rem;
+}
+.mainImg {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 30%;
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.glitter {
+  position: absolute;
+  width: 29%;
+  left: 36%;
+  top: 7%;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.next {
+  align-self: center;
+}
+
+.back {
+  flex: 1;
+  align-self: flex-start;
+}
+
+/* @media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+} */

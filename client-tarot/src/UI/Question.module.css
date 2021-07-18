@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300&display=swap");
+
+.container {
+  text-align: center;
+  margin: 3rem;
+  width: 60vw;
+  height: 21rem;
+  border-radius: 3rem;
+}
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: grid;
+  height: 100%;
+  background-color: rgb(24, 20, 20);
+  border-radius: 3rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.img {
+  border-radius: 3rem;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  /* overflow: hidden; */
+  z-index: 1;
+}
+.h1 {
+  position: relative;
+  text-align: center;
+  /* justify-content: center; */
+  font-weight: 200;
+  font-size: 1.6rem;
+  font-size: 2vw;
+  color: rgb(255, 255, 255);
+  font-family: "Caveat", cursive;
+  text-shadow: 0 0 1rem #850058;
+  word-wrap: break-word;
+  /* text-transform: uppercase; */
+  z-index: 2;
+}
+.h1 span {
+  font-weight: 400;
+  text-transform: uppercase;
+
+  /* font-family: "Bebas Neue", cursive; */
+  letter-spacing: 0.3rem;
+  text-transform: none;
+}

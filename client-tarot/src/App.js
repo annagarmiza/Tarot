@@ -4,30 +4,41 @@ import Header from "./Layout/Header";
 import WelcomeScreen from "./Layout/WelcomeScreen";
 import Board from "./components/Board";
 import styles from "./App.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import SpreadsSection from "./Layout/SpreadsSection";
+import { Fragment } from "react";
 
 function App() {
+  const spreadSectionRef = useRef();
   const [showBoard, setShowBoard] = useState(false);
-  const [dropDownValue, setDropDownValue] = useState("");
-  const [spreads, setSpread] = useState([]);
+  const [selectedSpread, setSelectedSpread] = useState("");
+  const [spread, setSpread] = useState();
+  const [enteredQuestion, setEnteredQuestion] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/api/v1/spreads")
       .then((response) => response.json())
       .then((data) => {
         setSpread(data.data.card_spreads);
-        console.log(data.data.card_spreads);
+      })
+      .catch((error) => {
+        throw error;
       });
   }, []);
 
-  // if (window.performance) {
-  //   if (performance.navigation.type === 1) {
-  //     setShowBoard(false);
-  //   }
-  // }
+  function onEnteredQuestion(question) {
+    setEnteredQuestion(question);
+  }
+
+  function spreadSectionScroll() {
+    spreadSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   function setBoard(selected) {
-    console.log(`this is from parent ${selected}`);
-    setDropDownValue(selected);
+    const selecteValue = { ...selected };
+    console.log(`this is from parent`, { ...selected });
+    setSelectedSpread(selecteValue);
+    console.log(selecteValue.layoutName);
     setShowBoard(true);
   }
 
@@ -36,9 +47,19 @@ function App() {
       <Header />
       <Video />
       {showBoard ? (
-        <Board selected={dropDownValue} />
+        <Board selected={selectedSpread} question={enteredQuestion} />
       ) : (
-        <WelcomeScreen spreads={spreads} onClick={setBoard} />
+        <Fragment>
+          <WelcomeScreen
+            onClick={spreadSectionScroll}
+            onEnteredQuestion={onEnteredQuestion}
+          />
+          <SpreadsSection
+            ref={spreadSectionRef}
+            spreads={spread}
+            onClick={setBoard}
+          ></SpreadsSection>
+        </Fragment>
       )}
     </body>
   );

@@ -1,0 +1,11 @@
+.icon {
+  position: relative;
+}
+.img {
+  right: 0;
+  position: fixed;
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+
+  height: 5rem;
+}

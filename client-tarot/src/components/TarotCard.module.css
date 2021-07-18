@@ -3,8 +3,12 @@
   /* padding: 0.3rem; */
   /* padding: 0.3rem; */
   /* width: 4rem; */
-  margin: 0.5rem;
-  border-radius: 1.5rem;
+  /* display: inline; */
+  /* margin: 0.5rem;
+  border-radius: 1.5rem; */
+  /* flex-direction: row; */
+  /* width: 6rem;
+  height: 8rem; */
   /* background-color: #230052; */
   /* box-shadow: 10px 5px 5px red; */
   /* background-color: #d2ced8; */
@@ -14,12 +18,12 @@
   /* background-color: transparent; */
   /* color: white; */
   /* align-items: stretch; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* position: absolute; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  perspective: 1000px;
+  align-items: center; */
+  /* perspective: 1000px; */
   /* flex-shrink: 70; */
   /* x-index: 1; */
   /* flex: 0 1 1px; */
@@ -30,19 +34,30 @@
   /* overflow-x: auto; */
   /* transform: translateX(-50rem); */
   /* transform: translateX(-6rem); */
-  transition: top ease 0.5s;
+  /* transition: top ease 0.5s; */
+  position: relative;
+  margin: 0.3rem;
+  /* padding: 16px; */
+  /* width: 6rem;
+  height: 8rem; */
+}
+
+.grid {
+  display: inline-block;
 }
 
 .card > * {
   /* flex: 1 1 8rem; */
 }
-.card__inner:hover {
+/* .card__inner:hover {
   /* top: 70rem; */
-  /* transition: transform 1s; */
+/* transition: transform 1s; */
 
-  transform: translateY(-0.5rem);
+/* transform: translateY(-0.5rem); */
+/* } */
+/* .card__inner:hover {
   box-shadow: 0 0.7rem 5rem 0.4rem rgb(206, 185, 255);
-}
+} */
 
 .card__inner {
   /* background-color: #230052; */
@@ -54,7 +69,31 @@
   /* transform-style: preserved-3d;
   transition: -webkit-transform 0.8s; */
   cursor: pointer;
-  /* position: relative; */
+  /*
+  
+  position: relative; */
+}
+
+.card_inner::after {
+  content: "";
+  top: -0.5rem;
+  box-shadow: 0 0.7rem 5rem 0.4rem rgb(206, 185, 255);
+  opacity: 0;
+}
+
+.card__inner:hover {
+  transform: translateY(-0.5rem);
+
+  /* top: 70rem; */
+  /* transition: transform 1s; */
+  /* box-shadow: 0 0.7rem 5rem 0.4rem rgb(206, 185, 255); */
+  /* opacity: 1; */
+}
+
+.card__inner::after:hover {
+  box-shadow: 0 0.7rem 5rem 0.4rem rgb(206, 185, 255);
+
+  opacity: 1;
 }
 
 /* .card__inner:active {
@@ -93,11 +132,10 @@
 
 .card img {
   border-radius: 0.2rem;
-
-  width: 6rem;
-  height: 8rem;
+  width: 7rem;
+  height: 9rem;
   object-fit: fill;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .card:first-child {
@@ -117,7 +155,7 @@
 @keyframes flip {
   0% {
     opacity: 0;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   50% {
