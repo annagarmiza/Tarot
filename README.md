@@ -5,6 +5,7 @@ FullStack project - mongoDB, nodeJS and react
 A digital tarot reading system. The tarot provides a glimpse into our inner self
 world. The cards reflect our thoughts, emotions and help us to truly connect and understand ourselves.
 <br />
+<br />
 Main Functionality:<br />
 The interface allows the user to select the desired card spread and type an open-ended question to ask
 the cards. Next, guides user through an intro and allows the user to shuffle the cards. Finally, the user
