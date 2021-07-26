@@ -22,7 +22,7 @@ Working on 👷‍♀️: <br />
 - User management <br />
 - Adding Redux <br />
 
-Next:
+Next 🔮:
 - Reflection – an input field for the user to document feelings and thoughts that arise from the reading (for signed up user). <br />
 - Reading History – Saving user’s reading and the relevant reflection (for signed up user).<br />
 - Mirroring – analysis of past user’s reading according to different criteria and showing a mirroring report (for signed up user).<br />
