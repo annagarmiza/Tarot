@@ -31,4 +31,4 @@ Next:
 
 
 Fixing 🛠: <br />
-- API calls 
+- Improving API calls in the code
