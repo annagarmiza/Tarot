@@ -1,12 +1,17 @@
 import React from "react";
 import InterpetationCard from "./InterpetationCard";
 import styles from "./InterpetationCardAll.module.css";
+import { useSelector } from "react-redux";
+import { getChosenCardsArr } from "../store/reading-slice";
 
-export default function InterpetationCardAll(props) {
+export default function InterpetationCardAll() {
+  const cards = useSelector(getChosenCardsArr);
+  console.log("cards11111111111111111111", cards);
+
   return (
     <div className={styles.container}>
       <ul style={{ listStyle: "none" }}>
-        {props.cardsResult.map((card) => (
+        {cards.map((card) => (
           <InterpetationCard
             key={card.id}
             name={card.name}

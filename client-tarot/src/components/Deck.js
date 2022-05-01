@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./Board.module.css";
 import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deckActions } from "../store/deck-slice";
+import {
+  getCardSpreadMax,
+  getChosenSpreadLayoutName,
+  getCurrentCardCount,
+} from "../store/reading-slice";
 import TarotCardsAll from "./TarotCardsAll";
 import CardReveal from "./CardReveal";
 import { Fragment } from "react";
@@ -26,21 +33,15 @@ export default function Deck(props) {
   ];
 
   //rewrite to use reducer
+  const dispatch = useDispatch();
+  const cardsSpreadMax = useSelector(getCardSpreadMax);
+  const cardsCountPerSpread = useSelector(getCurrentCardCount);
+  const spreadName = useSelector(getChosenSpreadLayoutName);
+  console.log(cardsSpreadMax, cardsCountPerSpread);
   const [visibleCardReveal, setVisibleCardReveal] = useState(false);
-  const [cardsCountPerSpread, setCardsCounterPerSpread] = useState(-1);
-  const [spreadMeaningArr, setSpreadMeaningArr] = useState([]);
-  const [cardsSpreadMax, setCardSpreadMax] = useState();
-  const [pickedCard, setPickedCard] = useState([]);
-  const [chosenCardsArr, setChosenCardsArr] = useState([]);
 
   const [soundIndex, setSoundIndex] = useState(0);
   const [openModal, setOpenModal] = useState(true);
-
-  useEffect(() => {
-    const meaning = props.selected.layout.map((x) => x.meaning);
-    setSpreadMeaningArr(meaning);
-    setCardSpreadMax(props.selected.cardsQuantity);
-  }, [props.selected]);
 
   useEffect(() => {
     if (soundIndex === soundArray.length) {
@@ -48,30 +49,14 @@ export default function Deck(props) {
     }
   }, [soundIndex, soundArray.length]);
 
-  function cardReveal(chosenCard) {
+  function cardReveal() {
     //managing sound effects - START
     let [play] = soundArray[soundIndex];
     play();
     setSoundIndex((prevCount) => prevCount + 1);
     //managing sound effects - END
 
-    setPickedCard(chosenCard);
-
-    if (cardsCountPerSpread < cardsSpreadMax - 1) {
-      chosenCardsArr.push({
-        name: chosenCard[0],
-        keys: chosenCard[1],
-        acrana: chosenCard[2],
-        element: chosenCard[3],
-        meaning: chosenCard[4],
-        img: chosenCard[5],
-        questions: chosenCard[6],
-        id: chosenCard[7],
-        spread_meaning: spreadMeaningArr[cardsCountPerSpread + 1],
-      });
-      setChosenCardsArr(chosenCardsArr);
-      setCardsCounterPerSpread((prevCount) => prevCount + 1);
-    } else {
+    if (!(cardsCountPerSpread <= cardsSpreadMax - 1)) {
       setVisibleCardReveal(false);
       return;
     }
@@ -84,9 +69,9 @@ export default function Deck(props) {
     // className = "styles.fade_out";
   }
 
-  function handleShuffle() {
-    props.onShuffle();
-  }
+  // function handleShuffle() {
+  //   props.onShuffle();
+  // }
   function onExitModal() {
     setOpenModal(false);
   }
@@ -98,23 +83,23 @@ export default function Deck(props) {
         <div className={styles.total}>
           <div className={styles.deck}>
             <h1 className={styles.h1}>
-              {props.selected.layoutName}{" "}
+              {spreadName}{" "}
               <span className={styles.span}>
-                {cardsSpreadMax - cardsCountPerSpread - 1 === 0
+                {cardsSpreadMax - cardsCountPerSpread === 0
                   ? `No More Cards To Choose`
                   : `${
-                      cardsSpreadMax - cardsCountPerSpread - 1
+                      cardsSpreadMax - cardsCountPerSpread
                     } more cards to choose`}
               </span>
-              <Button onClick={handleShuffle}>SHUFFLE</Button>
+              <Button onClick={() => dispatch(deckActions.handleShuffle())}>
+                SHUFFLE
+              </Button>
             </h1>
-            <TarotCardsAll onClickCardReveal={cardReveal} cards={props.cards} />
+
+            <TarotCardsAll onClickCardReveal={cardReveal} />
           </div>
           {visibleCardReveal ? (
             <CardReveal
-              cardTitle={pickedCard[0]}
-              cardImg={pickedCard[5]}
-              cardSpreadMeaning={spreadMeaningArr[cardsCountPerSpread]}
               removeComponent={setTimeout(function () {
                 cardRevealStop();
               }, 5000)} //5500 before
@@ -122,10 +107,10 @@ export default function Deck(props) {
           ) : (
             ""
           )}
-          {cardsSpreadMax - cardsCountPerSpread - 1 === 0 ? (
+          {cardsSpreadMax - cardsCountPerSpread === 0 ? (
             <Freeze
               onFinish={setTimeout(function () {
-                props.onFinish(chosenCardsArr);
+                props.onFinish();
               }, 6500)} //6500
             />
           ) : (

@@ -1,0 +1,19 @@
+.error {
+  background-color: rgba(11, 2, 19, 0.85);
+  width: 100vw;
+  margin-top: 9rem;
+  padding-bottom: 3rem;
+  height: auto;
+  background-size: contain;
+  font-size: 2.5em;
+}
+
+.center {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
