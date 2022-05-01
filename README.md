@@ -17,9 +17,9 @@ layout and will return to the user a complete card interpretation based on card 
 Done ✅:
 <br />
 - Main Functionality - Full User Reading Experience <br />
-- Adding Redux <br />
 
 Working on 👷‍♀️: <br />
+- Adding Redux <br />
 - Advanced Tarot Reading - upside reading card
 - User management <br />
 
