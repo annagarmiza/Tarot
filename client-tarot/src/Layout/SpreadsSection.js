@@ -5,12 +5,23 @@ import SpreadSectionCard from "./SpreadSectionCard";
 import iconMagic from "../assets/magic.png";
 import iconSmoke from "../assets/smoke.png";
 import iconCrystalBall from "../assets/crystal-ball.png";
+import { useDispatch, useSelector } from "react-redux";
+import { getSpreadsStatus, selectAllSpreads } from "../store/spreads-slice";
+import { readingActions } from "../store/reading-slice";
+
 import { forwardRef } from "react";
 
 const SpreadsSection = forwardRef((props, ref) => {
+  const dispatch = useDispatch();
+  const spreads = useSelector(selectAllSpreads);
   function chosenSpread() {
-    const selectedSpread = props.spreads.find((x) => x._id === this.spreadId);
-    props.onClick(selectedSpread);
+    // const selectedSpread = props.spreads.find((x) => x._id === this.spreadId);
+    // console.log("I'm inside selectedSpread", selectedSpread);
+    // props.onClick(selectedSpread);
+    const selectedSpread = spreads.find((x) => x._id === this.spreadId);
+    console.log("I'm inside selectedSpread", selectedSpread);
+    dispatch(readingActions.setSpread(selectedSpread));
+    props.onClick();
   }
   return (
     <div>

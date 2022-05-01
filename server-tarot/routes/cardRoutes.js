@@ -13,4 +13,6 @@ router
   .get(cardController.getCard)
   .patch(cardController.updateCard);
 
+router.route("/reading").post(cardController.getInterpretation);
+
 module.exports = router;

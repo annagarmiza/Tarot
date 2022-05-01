@@ -4,15 +4,31 @@ exports.getAllCards = async (req, res) => {
   try {
     //Filtering
     const queryObj = { ...req.query };
-    const excludeFields = ["page", "sort", "limit", "fields"];
+    console.log("This is Query Object", JSON.stringify(req.body));
+    console.log("This is Query Object", JSON.stringify(queryObj));
+    const excludeFields = ["page", "sort", "limit", "fields", "ids"];
     excludeFields.forEach((el) => delete queryObj[el]);
 
     let query = Card.find(queryObj);
-    console.log(query);
 
     //Sorting
     if (req.query.sort) {
-      query = query.sort(req.query.sort);
+      const sortBy = req.query.sort.split(",").join(" ");
+      query = query.sort(sortBy);
+    }
+
+    //Field limiting
+    if (req.query.fields) {
+      const fields = req.query.fields.split(`,`).join(" ");
+      query = query.select(fields);
+    } else {
+      query = query.select("-__v");
+    }
+    //return multiple ids
+    if (req.query.ids) {
+      const ids = req.query.ids.split(`,`);
+      console.log("IDS", req.query.ids);
+      query = Card.find({ _id: { $in: ids } });
     }
 
     const cards = await query;
@@ -72,6 +88,25 @@ exports.createCard = async (req, res) => {
       status: "success",
       data: {
         card: newCard,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: "Invalid Data",
+    });
+  }
+};
+
+exports.getInterpretation = async (req, res) => {
+  try {
+    console.log("THIS IS INSIDE POST MOTHER FUCKERS", JSON.stringify(req.body));
+    // const newCard = await Card.create(req.body);
+
+    res.status(201).json({
+      status: "success",
+      data: {
+        //card: newCard,
       },
     });
   } catch (err) {
