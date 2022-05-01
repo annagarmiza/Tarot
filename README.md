@@ -17,10 +17,11 @@ layout and will return to the user a complete card interpretation based on card 
 Done ✅:
 <br />
 - Main Functionality - Full User Reading Experience <br />
+- Adding Redux <br />
 
 Working on 👷‍♀️: <br />
+- Advanced Tarot Reading - upside reading card
 - User management <br />
-- Adding Redux <br />
 
 Next 🔮:
 - Reflection – an input field for the user to document feelings and thoughts that arise from the reading (for signed up user). <br />
