@@ -3,6 +3,7 @@
 .board {
   margin-top: 9rem;
   background-color: rgba(11, 2, 19, 0.719);
+
   width: 100vw;
   height: auto;
   z-index: -5;
@@ -44,6 +45,7 @@
 .total {
   position: absolute;
   background-color: rgba(11, 2, 19, 0.719);
+
   width: 100vw;
   height: 100vh;
 }
