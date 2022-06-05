@@ -166,32 +166,3 @@
     opacity: 1;
   }
 }
-
-.test {
-  /* position: absolute;
-
-  animation-name: testMove;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards; */
-}
-
-/* @keyframes testMove {
-  0% {
-    top: 50%;
-    left: 50%;
-    /* transform: translateX(0px); */
-/*} */
-/* 100% {
-    /* top: 50%;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
-    transform: translateY(-3000%);
-    transform: scale(5); */
-/* margin: -50vh -50vw auto 0; */
-/* transform: translateY(-50%); */
-/* left: -100px;
-    top: -100px; */
-/*} */ /*} */

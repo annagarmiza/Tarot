@@ -6,7 +6,7 @@ import { getChosenCardsArr } from "../store/reading-slice";
 
 export default function InterpetationCardAll() {
   const cards = useSelector(getChosenCardsArr);
-  console.log("cards11111111111111111111", cards);
+  //console.log("cards11111111111111111111", cards);
 
   return (
     <div className={styles.container}>

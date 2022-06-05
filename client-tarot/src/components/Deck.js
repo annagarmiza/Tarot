@@ -62,16 +62,11 @@ export default function Deck(props) {
     }
 
     setVisibleCardReveal(true);
-    //set state trigger the card to shown , and after a while hide
   }
   function cardRevealStop() {
     setVisibleCardReveal(false);
-    // className = "styles.fade_out";
   }
 
-  // function handleShuffle() {
-  //   props.onShuffle();
-  // }
   function onExitModal() {
     setOpenModal(false);
   }

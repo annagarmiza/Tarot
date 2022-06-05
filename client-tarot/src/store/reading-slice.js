@@ -89,8 +89,6 @@ export const getCardSpreadMax = (state) => state.reading.spreadCardsQuantity;
 export const getCurrentCardCount = (state) => state.reading.currentCard;
 export const getChosenSpreadLayoutName = (state) => state.reading.spreadName;
 export const getChosenCard = (state) => state.reading.cards.slice(-1)[0];
-// export const getMeaningLastCard = (state) =>
-//   state.reading.spreadMeaning[state.reading.cards.length - 1];
 export const getChosenCardsArr = (state) => state.reading.cards;
 export const getInterpretationStatus = (state) => state.reading.status;
 export const getQuestion = (state) => state.reading.question;
