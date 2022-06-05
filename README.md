@@ -17,10 +17,11 @@ layout and will return to the user a complete card interpretation based on card 
 Done ✅:
 <br />
 - Main Functionality - Full User Reading Experience <br />
+- Adding Redux + Thunks <br />
 
 Working on 👷‍♀️: <br />
+- Advanced Tarot Reading - upside reading card
 - User management <br />
-- Adding Redux <br />
 
 Next 🔮:
 - Reflection – an input field for the user to document feelings and thoughts that arise from the reading (for signed up user). <br />
@@ -29,6 +30,3 @@ Next 🔮:
 - Tailor maid reading interpretation – returning an adjusted reading (love, career, wellbeing). For example, if the question includes ‘money’ – a financial answer will be       displayed. <br />
 - Feedback – collecting user feedback after a reading (liked/disliked) in order to improved the digital response. <br />
 
-
-Fixing 🛠: <br />
-- Improving API calls in the code
