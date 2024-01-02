@@ -1,5 +1,5 @@
 # Tarot
-Tarot Reading Web App - On the making
+Tarot Reading Web App -
 FullStack project - mongoDB, nodeJS and react 
 <br />
 A digital tarot reading system. The tarot provides a glimpse into our inner self
